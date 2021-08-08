@@ -13,6 +13,8 @@
         </div>
         <header>
             <a href="#" class="logo"><img src="/images/logo.png" alt="Charis"></a>
+            <!-- nav toggle -->
+            <div class="toggle"></div>
             <!-- nav menu-->
             <ul class="navigation">
                 <li><a href="#">Jute Bags</a></li>
@@ -49,8 +51,8 @@
                 >
             </li>
             <li data-text="Shopping Jute bag">
-                <img src="./images/png/Shopping_Jute_bag.png"
-                onclick="imgSlider('./images/png/Shopping_Jute_bag.png');changeBgColor('#ba9b78')"
+                <img src="./images/png/Be_Happy_carry_bag.png"
+                onclick="imgSlider('./images/png/Be_Happy_carry_bag.png');changeBgColor('#ba9b78')"
                 >
             </li>
             <li data-text="Women Style">
@@ -61,6 +63,14 @@
 
     </section>
     <script>
+        let menuToggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+
         function imgSlider(anything){
         document.querySelector('.imgbox img').src = anything;
         }
