@@ -62,3 +62,46 @@ header .navigation li a{
 header .navigation li a:hover{
     background: #ffff;
 }
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .textbox{
+    position: relative;
+    max-width: 600px;
+
+    font-family: Roboto;
+    color: #ffffff;
+}
+.content .textbox h2{
+    font-size: 3.5em;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-transform: capitalize;
+}
+.content .textbox p{
+    margin-top: 20px;
+}
+.content .textbox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #ffff;
+    color: black;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.content .imgbox{
+    position: relative;
+    z-index: 1;
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+}
+.content .imgbox img{
+    max-width: 400px;
+}
