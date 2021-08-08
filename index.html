@@ -36,6 +36,49 @@
                 <img src="/images/png/Be_Happy_carry_bag.png" alt="">
             </div>
         </div>
+        <ul class="thumb">
+
+            <li data-text="Gift Giveaway Bag" class="active">
+                <img src="./images/png/Gift _Giveaway_Bag.png"
+                onclick="imgSlider('./images/png/Gift _Giveaway_Bag.png');changeBgColor('#cdb446')"
+                >
+            </li>
+            <li data-text="Jute School bag">
+                <img src="./images/png/Jute_School_bag.png"
+                onclick="imgSlider('./images/png/Jute_School_bag.png');changeBgColor('#a54935')"
+                >
+            </li>
+            <li data-text="Shopping Jute bag">
+                <img src="./images/png/Shopping_Jute_bag.png"
+                onclick="imgSlider('./images/png/Shopping_Jute_bag.png');changeBgColor('#ba9b78')"
+                >
+            </li>
+            <li data-text="Women Style">
+                <img src="./images/png/Women___Style.png"
+                onclick="imgSlider('./images/png/Women___Style.png');changeBgColor('#de5455')"
+                >
+            </li>
+
     </section>
+    <script>
+        function imgSlider(anything){
+        document.querySelector('.imgbox img').src = anything;
+        }
+        function changeBgColor(color){
+        const bg = document.querySelector('.bg');
+        bg.style.background = color;
+        }
+        let el = document.querySelectorAll('.thumb li');
+        for (let i = 0; i < el.length; i++){
+            el[i].onclick = function(){
+                var c = 0;
+                while(c < el.length){
+                    el[c++].className = 'check';
+                }
+                el[i].className = 'check active';
+            }
+        }
+    </script>
+
 </body>
 </html>
