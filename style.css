@@ -190,9 +190,7 @@ nav .navigation li a:hover{
         max-width: 40px;
     }
     .thumb li::before{
-        position: absolute;
-        top: -60px;
-        font-size: 3em;
+        display: none;
     }
     .toggle{
         position: relative;
