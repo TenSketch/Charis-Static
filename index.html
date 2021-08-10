@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="bg">
+        </div>
+        <nav>
+            <a href="#" class="logo"><img src="/images/logo.png" alt="Charis"></a>
+            <!-- nav toggle -->
+            <div class="toggle"></div>
+            <!-- nav menu-->
+            <ul class="navigation">
+                <li><a href="#">Jute Bags</a></li>
+                <li><a href="#">Gifts</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <!-- nav icons -->
+            <ul  class="navigation icons">
+                <li><a href="#"><img src="/images/Vector-1.png" alt="contact"></a></li>
+                <li><a href="#"><img src="/images/Vector-2.png" alt="contact"></a></li>
+                <li><a href="#"><img src="/images/Vector-3.png" alt="contact"></a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="textbox">
+                <h2>standard dummy text</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                <a href="#">Learn More</a>    
+            </div>
+            <div class="imgbox">
+                <img src="/images/png/Be_Happy_carry_bag.png" alt="">
+            </div>
+        </div>
+        <ul class="thumb">
+
+            <li data-text="Gift Giveaway Bag" class="active">
+                <img src="./images/png/Gift _Giveaway_Bag.png"
+                onclick="imgSlider('./images/png/Gift _Giveaway_Bag.png');changeBgColor('#cdb446')"
+                >
+            </li>
+            <li data-text="Jute School bag">
+                <img src="./images/png/Jute_School_bag.png"
+                onclick="imgSlider('./images/png/Jute_School_bag.png');changeBgColor('#a54935')"
+                >
+            </li>
+            <li data-text="Shopping Jute bag">
+                <img src="./images/png/Be_Happy_carry_bag.png"
+                onclick="imgSlider('./images/png/Be_Happy_carry_bag.png');changeBgColor('#ba9b78')"
+                >
+            </li>
+            <li data-text="Women Style bag">
+                <img src="./images/png/Women___Style.png"
+                onclick="imgSlider('./images/png/Women___Style.png');changeBgColor('#de5455')"
+                >
+            </li>
+
+    </section>
+    <script>
+        let menuToggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+
+        function imgSlider(anything){
+        document.querySelector('.imgbox img').src = anything;
+        }
+        function changeBgColor(color){
+        const bg = document.querySelector('.bg');
+        bg.style.background = color;
+        }
+        let el = document.querySelectorAll('.thumb li');
+        for (let i = 0; i < el.length; i++){
+            el[i].onclick = function(){
+                var c = 0;
+                while(c < el.length){
+                    el[c++].className = 'check';
+                }
+                el[i].className = 'check active';
+            }
+        }
+    </script>
+
+</body>
+</html>
