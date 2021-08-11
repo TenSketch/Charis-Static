@@ -45,7 +45,7 @@ section {
   background: rgba(0, 0, 0, 0.1);
 }
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -56,7 +56,11 @@ nav {
   background: rgba(220, 205, 188, 0.7);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
-  display: none;
+  /* display: none; */
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
 }
 .logo img {
   height: 3rem;

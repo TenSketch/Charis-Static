@@ -1,3 +1,4 @@
+// Hamburger menu
 let menuToggle = document.querySelector('.toggle');
 let navigation = document.querySelector('.navigation');
 
@@ -6,6 +7,20 @@ menuToggle.onclick = function () {
     navigation.classList.toggle('active')
 }
 
+//show nav on scroll
+let showNav = document.querySelector('nav')
+
+window.onscroll = function() {
+  if (document.body.scrollTop || document.documentElement.scrollTop ) {
+    showNav.style.visibility = "visible";
+    showNav.style.opacity = 1;
+  } else {
+    showNav.style.visibility = "hidden";
+    showNav.style.opacity = 0;
+  }
+}
+
+//Image slider
 function imgSlider(anything) {
     document.querySelector('.imgbox img').src = anything;
 }
@@ -23,3 +38,4 @@ for (let i = 0; i < el.length; i++) {
         el[i].className = 'check active';
     }
 }
+
