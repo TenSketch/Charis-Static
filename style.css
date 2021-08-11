@@ -255,3 +255,10 @@ nav .navigation li a:hover {
     margin: 5px 0;
   }
 }
+
+
+.featured_products{
+    background: #9b8055;
+    min-height: 100vh;
+    
+}
