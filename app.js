@@ -7,6 +7,16 @@ menuToggle.onclick = function () {
     navigation.classList.toggle('active')
 }
 
+//show nav on scroll
+let showNav = document.querySelector('nav')
+window.onscroll = function() {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    showNav.style.display = "flex";
+  } else {
+    showNav.style.display = "none";
+  }
+}
+
 //Image slider
 function imgSlider(anything) {
     document.querySelector('.imgbox img').src = anything;
