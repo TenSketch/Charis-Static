@@ -9,11 +9,14 @@ menuToggle.onclick = function () {
 
 //show nav on scroll
 let showNav = document.querySelector('nav')
+
 window.onscroll = function() {
-  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-    showNav.style.display = "flex";
+  if (document.body.scrollTop || document.documentElement.scrollTop ) {
+    showNav.style.visibility = "visible";
+    showNav.style.opacity = 1;
   } else {
-    showNav.style.display = "none";
+    showNav.style.visibility = "hidden";
+    showNav.style.opacity = 0;
   }
 }
 
