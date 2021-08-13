@@ -216,6 +216,7 @@ nav .navigation li a:hover {
     position: absolute;
     top: -60px;
     font-size: 3em;
+    display: none;
   }
   .toggle {
     position: relative;
@@ -265,4 +266,13 @@ nav .navigation li a:hover {
     background: #9b8055;
     min-height: 100vh;
     
+}
+
+/* sample css for scrolling */
+.sample{
+  background-color: #9b805555;
+  min-width: 25%;
+  margin-inline: 2%;
+  padding: 5%;
+  flex-wrap: wrap;
 }
