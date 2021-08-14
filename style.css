@@ -1,31 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-* {
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-    line-height: 1.5;
-    font-family: 'Balsamiq Sans', cursive;
+body {
+  line-height: 1.5;
+  font-family: 'Balsamiq Sans', cursive;
 }
-img{
-    max-width: 100%;
-    display: block;
-}
-section {
+/* my */
+.sec-1 {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 4rem;
-  display: flex;
+  padding-bottom: 4rem;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
-}
-.container{
-    width: min(80%,1100px);
-    margin: 0 auto;
+  overflow-x: hidden; */
 }
 .bg {
   position: absolute;
@@ -44,48 +40,209 @@ section {
   height: 100%;
   background: rgba(0, 0, 0, 0.1);
 }
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(220, 205, 188, 0.7);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  /* display: none; */
-  z-index: 3;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.5s, opacity 0.5s linear;
-}
-.logo img {
-  height: 3rem;
-}
-/* nav .logo img{
-    position: absolute;
-} */
-nav .navigation {
+.header {
   position: relative;
+  height: 10vh;
+  background-image: linear-gradient(hsla(0, 0%, 97%, .9), #9B8055);
+  
+}
+/* my code ends */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0px;
+    margin: 0 auto;
+    align-items:center;
+
+}
+.nav-icons {
+  list-style: none;
   display: flex;
 }
-nav .navigation li {
-  list-style: none;
+.nav-icons a {
+  padding: 0px 10px; 
 }
-nav .navigation li a {
-  display: inline-block;
-  color: #9b8055;
-  font-weight: 400;
-  margin-left: 10px;
-  padding: 8px 15px;
-  border-radius: 40px;
+
+/* this is navbar list */
+.nav-items {
+  position: absolute;
+  z-index: 3;
+  top: 100%;      
+  right: 0%;
+  background: #464655;
+  clip-path: circle(0px at top right);        
+  transition: clip-path ease-in-out 700ms;
+  height: 80vh;
+  width: 60vw;
+  overflow: hidden;
+}
+
+/* this class used in main.js file i.e nav-items--open*/
+.nav-items--open {
+  clip-path: circle(250% at top right);
+  
+}
+
+.nav-items ul {
+  list-style:none;
+  height: 100%;
+  flex-direction: row; 
+}
+.nav-items li {
+  border-bottom: 1px solid #575766;
+  
+}
+
+.nav-items li:last-child {
+  border-bottom: none;
+}
+/* Animation Part begin */
+.nav-items--open li{
+   opacity: 0;
+    animation: fadeIn ease-out 800ms forwards;
+} 
+.nav-items--open li:nth-child(1) { animation-delay: 0ms; }
+.nav-items--open li:nth-child(2) { animation-delay: 100ms; }
+.nav-items--open li:nth-child(3) { animation-delay: 200ms; }
+.nav-items--open li:nth-child(4) { animation-delay: 300ms; }
+
+
+@keyframes fadeIn {
+    0% {   opacity: 0; transform: translateX(100px); }
+   100% { opacity: 1; transform:  translateX(0%);   }
+}
+
+/* this class used in main.js file i.e nav-items--closed */
+
+.nav-items--closed li{
+  opacity: 1;
+  animation: fadeIn ease-out 800ms forwards;
+} 
+
+.nav-items--open li:nth-child(4) { animation-delay: 200ms; }
+.nav-items--open li:nth-child(3) { animation-delay: 300ms; }
+.nav-items--open li:nth-child(2) { animation-delay: 400ms; }
+.nav-items--open li:nth-child(1) { animation-delay: 500ms; }
+
+@keyframes fadeOut {
+  0% {   opacity: 1; transform: translateX(0%); }
+ 100% { opacity: 0; transform:  translateX(500px);   }
+}
+
+.nav-items a {
+  color: #9B8055;
+  display: flex;
+  padding: 2em 4em;
   text-decoration: none;
+  
 }
-nav .navigation li a:hover {
-  background: #ffff;
+
+.nav-items a:hover,
+.nav-items a:focus {
+  background: #eccf9f;
+  color: #aa7c31;
+}
+
+
+.menu-toggle {
+  cursor: pointer;
+  display: flex;
+}
+
+/* In this I have used after-befor other than three lines or bars in hamburger */
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #9B8055;
+  transform: translateY(2px);
+  height: 3px;
+  width: 2em; 
+  border-radius: 3px;
+  transition: all ease-in-out 700ms;
+  cursor: pointer;
+  
+  
+}
+
+.hamburger::before {
+   transform: translateY(12px);  
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+} 
+
+
+.open .hamburger {
+  transform: rotate(-45deg);
+}
+
+ .open .hamburger::before {
+  opacity: 0;
+} 
+
+ .open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+} 
+
+/* Desktop view */
+
+@media (min-width: 650px) {
+  
+
+  .menu-toggle .hamburger {
+    display: none;
+  }
+  
+  .nav-items {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float:right;
+    clip-path:initial;
+    width: 70vh;
+          
+  }
+  .nav-items ul{
+    display: flex;
+    
+  }
+  
+  .nav-items li {
+    border: none;
+    justify-content: space-between;
+  }
+  
+  .nav-items a {
+     padding: 0; 
+    margin-left: 2.5em; 
+  }
+  
+  .nav-items a:hover,
+  .nav-items a:focus {
+    background: transparent;
+  }
+  
+  .nav-items--icon {
+    display: none;
+  }
+  
+}
+/* my */
+.image_slider{
+  position: relative;
+  width: 100%;
+  min-height: 90vh; /* conflict */
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+
 }
 .content {
   position: relative;
@@ -151,7 +308,7 @@ nav .navigation li a:hover {
 }
 .thumb li::before {
   position: absolute;
-  top: -70px;
+  top: -85px;
   left: -80px;
   white-space: nowrap;
   content: attr(data-text);
@@ -179,12 +336,9 @@ nav .navigation li a:hover {
   .bg::before {
     display: none;
   }
-  nav {
-    padding: 20px;
-  }
-  section {
-    padding: 20px;
-    padding-bottom: 120px;
+  .image_slider{
+    padding: 0;
+    align-items: flex-start;
   }
   .content {
     margin-top: 100px;
@@ -218,61 +372,10 @@ nav .navigation li a:hover {
     font-size: 3em;
     display: none;
   }
-  .toggle {
-    position: relative;
-    width: 25px;
-    height: 25px;
-    margin-top: -20px;
-    cursor: pointer;
-    background: url(/images/bars-solid.svg);
-    background-size: 25px;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 3;
-  }
-  .toggle.active {
-    position: fixed;
-    right: 20px;
-    background: url(/images/closenav.svg);
-    background-size: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  nav .navigation {
-    display: none;
-  }
-  nav .navigation.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #ffff;
-    z-index: 2;
-  }
-  nav .navigation li a {
-    font-size: 1.2em;
-    margin: 5px 0;
-  }
 }
-
-
-.featured_products{
-    background: #9b8055;
-    min-height: 100vh;
-    
-}
-
-/* sample css for scrolling */
 .sample{
   background-color: #9b805555;
   min-width: 25%;
-  margin-inline: 2%;
+  margin: 5%;
   padding: 5%;
-  flex-wrap: wrap;
 }

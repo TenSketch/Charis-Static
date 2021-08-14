@@ -1,24 +1,42 @@
-// Hamburger menu
-let menuToggle = document.querySelector('.toggle');
-let navigation = document.querySelector('.navigation');
+//Aman's nav
+const toggle = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector(".nav-items");
 
-menuToggle.onclick = function () {
-    menuToggle.classList.toggle('active')
-    navigation.classList.toggle('active')
-}
+toggle.addEventListener("click", function(){
+    if(siteNav.classList.contains("nav-items--open")) {
+      siteNav.classList.remove("nav-items--open");
+      toggle.classList.remove("open");
 
-//show nav on scroll
-let showNav = document.querySelector('nav')
+      siteNav.classList.add("nav-items--closed");
+    } else{
+        siteNav.classList.add("nav-items--closed");
+        toggle.classList.add("open");
 
-window.onscroll = function() {
-  if (document.body.scrollTop || document.documentElement.scrollTop ) {
-    showNav.style.visibility = "visible";
-    showNav.style.opacity = 1;
-  } else {
-    showNav.style.visibility = "hidden";
-    showNav.style.opacity = 0;
-  }
-}
+        siteNav.classList.add("nav-items--open");
+    }
+});
+
+// // Hamburger menu
+// let menuToggle = document.querySelector('.toggle');
+// let navigation = document.querySelector('.navigation');
+
+// menuToggle.onclick = function () {
+//     menuToggle.classList.toggle('active')
+//     navigation.classList.toggle('active')
+// }
+
+// //show nav on scroll
+// let showNav = document.querySelector('nav')
+
+// window.onscroll = function() {
+//   if (document.body.scrollTop || document.documentElement.scrollTop ) {
+//     showNav.style.visibility = "visible";
+//     showNav.style.opacity = 1;
+//   } else {
+//     showNav.style.visibility = "hidden";
+//     showNav.style.opacity = 0;
+//   }
+// }
 
 //Image slider
 function imgSlider(anything) {

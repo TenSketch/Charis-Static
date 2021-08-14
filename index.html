@@ -1,86 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charis</title>
     <link rel="stylesheet" href="style.css">
+    <title>NavBar</title>
 </head>
-
 <body>
-    <section>
-        <div class="bg">
-        </div>
-        <nav>
-            <a href="#" class="logo"><img src="/images/Charish-logo.png" alt="Charis"></a>
-            <!-- nav toggle -->
-            <div class="toggle"></div>
-            <!-- nav menu-->
-            <ul class="navigation">
-                <li><a href="#">Jute Bags</a></li>
-                <li><a href="#">Gifts</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
-            <!-- nav icons -->
-            <ul class="navigation icons">
-                <li><a href="#"><img src="/images/Vector-1.png" alt="contact"></a></li>
-                <li><a href="#"><img src="/images/Vector-2.png" alt="contact"></a></li>
-                <li><a href="#"><img src="/images/Vector-3.png" alt="contact"></a></li>
-            </ul>
+  <section class="sec-1">
+    <div class="bg">
+    </div>
+
+    <div class="header">
+      <div class="container">
+        <img src="images/logo.png" alt="logo">
+        <nav class="nav-items">           
+          <ul>
+            <li><a href="#">Jute Bags</a></li> 
+            <li><a href="#">Gifts</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
         </nav>
-        <div class="content">
-            <div class="textbox">
-                <h2>Charis Jute Bags</h2>
-                <p>Why should you buy a Jute bag? </p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="imgbox">
-                <img src="/images/png/Be_Happy_carry_bag.png" alt="">
-            </div>
+        
+        <!-- Hamburger works starts here -->
+        <div class="menu-toggle">
+          <!--ignore this nav-icons -->
+          <div class="nav-icons">
+            <a href=""><img src="images/Vector-1.png" alt="icon"></a>
+            <a href=""><img src="images/Vector-2.png" alt="icon"></a>
+            <a href=""><img src="images/Vector-3.png" alt="icon"></a>
+          </div>
+          <div class="hamburger">
+          </div>
         </div>
-        <ul class="thumb">
+      </div>
+    </div>
 
-            <li data-text="Gift Giveaway Bag" class="active">
-                <img src="./images/png/Gift _Giveaway_Bag.png"
-                    onclick="imgSlider('./images/png/Gift _Giveaway_Bag.png');changeBgColor('#cdb446')">
-            </li>
-            <li data-text="Jute School bag">
-                <img src="./images/png/Jute_School_bag.png"
-                    onclick="imgSlider('./images/png/Jute_School_bag.png');changeBgColor('#a54935')">
-            </li>
-            <li data-text="Shopping Jute bag">
-                <img src="./images/png/Be_Happy_carry_bag.png"
-                    onclick="imgSlider('./images/png/Be_Happy_carry_bag.png');changeBgColor('#ba9b78')">
-            </li>
-            <li data-text="Women Style bag">
-                <img src="./images/png/Women___Style.png"
-                    onclick="imgSlider('./images/png/Women___Style.png');changeBgColor('#de5455')">
-            </li>
-        </ul>
-    </section>
-    <!--  sample section for scrolling  -->
-    <section>
-        <div class="sample">
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
+    <div class="image_slider">
+      <div class="content">
+        <div class="textbox">
+            <h2>Charis Jute Bags</h2>
+            <p>Why should you buy a Jute bag? </p>
+            <a href="#">Learn More</a>
         </div>
-        <div class="sample">
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
+        <div class="imgbox">
+            <img src="/images/png/Be_Happy_carry_bag.png" alt="">
         </div>
-        <div class="sample">
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-        </div>
-    </section>
+      </div>
+      <ul class="thumb">
+        <li data-text="Gift Giveaway Bag" class="active">
+            <img src="./images/png/Gift _Giveaway_Bag.png"
+                onclick="imgSlider('./images/png/Gift _Giveaway_Bag.png');changeBgColor('#cdb446')">
+        </li>
+        <li data-text="Jute School bag">
+            <img src="./images/png/Jute_School_bag.png"
+                onclick="imgSlider('./images/png/Jute_School_bag.png');changeBgColor('#a54935')">
+        </li>
+        <li data-text="Shopping Jute bag">
+            <img src="./images/png/Be_Happy_carry_bag.png"
+                onclick="imgSlider('./images/png/Be_Happy_carry_bag.png');changeBgColor('#ba9b78')">
+        </li>
+        <li data-text="Women Style bag">
+            <img src="./images/png/Women___Style.png"
+                onclick="imgSlider('./images/png/Women___Style.png');changeBgColor('#de5455')">
+        </li>
+      </ul>
+    </div>
+  </section>
 
-
-   <script src="app.js"></script>
+  <!--  sample section for scrolling  -->
+  <section class="sec-1">
+    <div class="sample">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+    </div>
+    <div class="sample">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+    </div>
+    <div class="sample">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+    </div>
+  </section>
+  <script src="app.js"></script>
 </body>
 
 </html>
