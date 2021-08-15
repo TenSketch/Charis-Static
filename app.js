@@ -20,6 +20,14 @@ window.onscroll = function() {
   }
 }
 
+//login and signup form popup on vector-2 img
+document.querySelector("#show-login").addEventListener("click",function(){
+  document.querySelector(".popup").classList.add("active");
+  });
+  document.querySelector(".popup .close-btn").addEventListener("click",function(){
+  document.querySelector(".popup").classList.remove("active");
+  });
+
 //Image slider
 function imgSlider(anything) {
     document.querySelector('.imgbox img').src = anything;
