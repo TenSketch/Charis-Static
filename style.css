@@ -47,12 +47,12 @@ section {
   padding: 1rem 4rem;
   display: flex;
   align-items: center;
+  z-index: 3;
   /* background: rgba(220, 205, 188, 0.7);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px); */
-  /* display: none; */
-  z-index: 3;
-  /* visibility: hidden;
+  backdrop-filter: blur(4px);
+  display: none;
+  visibility: hidden;
   opacity: 0;
   transition: visibility 0.5s, opacity 0.5s linear; */
 }
@@ -99,7 +99,6 @@ nav{
   margin-left: .5em;
 }
 
-
 /* login and signup form popup on vector-2 img */
 
 .dropdown-menu{
@@ -122,7 +121,7 @@ nav{
   background-color: #fff;
 }
 
-.popup{
+.popup, .popup2{
   position: absolute;
   z-index: 10;
   top: 0;
@@ -141,7 +140,7 @@ nav{
               transform 20ms ease-in-out 0ms;
 
 }
-.popup.active{
+.popup.active, .popup2.active2{
   top: 50%;
   opacity: 1;
   display: block;
@@ -150,7 +149,7 @@ nav{
               opacity 200ms ease-in-out 0ms,
               transform 20ms ease-in-out 0ms;
 }
-.popup .close-btn{
+.popup .close-btn, .popup2 .close-btn2{
   position: absolute;
   top: 10px;
   right: 10px;
@@ -163,21 +162,23 @@ nav{
   border-radius: 15px;
   cursor: pointer;
 }
-.popup .form h2{
+.popup .form h2, .popup2 .form h2{
   text-align: center;
   color: #9b8055;
   margin: 10px 0 20px;
   font-size: 25px;
 }
-.popup .form .form-element{
+.popup .form .form-element, .popup2 .form .form-element{
   margin: 15px 0;
 }
-.popup .form .form-element label{
+.popup .form .form-element label, .popup2 .form .form-element label{
   font-size: 14px;
   color: black;
 }
 .popup .form .form-element input[type="text"],
-.popup .form .form-element input[type="password"]{
+.popup .form .form-element input[type="password"],
+.popup2 .form .form-element input[type="text"],
+.popup2 .form .form-element input[type="password"]{
   margin-top: 5px;
   display: block;
   width: 100%;
@@ -186,16 +187,21 @@ nav{
   border: 1px solid #000;
   border-radius: 5px;
 }
-.popup .form .form-element input[type="checkbox"]{
+.popup .form .form-element input[type="checkbox"],
+.popup2 .form .form-element input[type="checkbox"]{
   margin-right: 5px;
 }
 .popup .form .form-element input[type="text"]:focus,
 .popup .form .form-element input[type="password"]:focus,
-.popup .form .form-element input[type="checkbox"]:focus{
+.popup .form .form-element input[type="checkbox"]:focus,
+.popup2 .form .form-element input[type="text"]:focus,
+.popup2 .form .form-element input[type="password"]:focus,
+.popup2 .form .form-element input[type="checkbox"]:focus{
   border: 2px solid #9b8055;
   background: beige;
 }
-.popup .form .form-element button{
+.popup .form .form-element button,
+.popup2 .form .form-element button{
   width: 100%;
   height: 40px;
   border: none;
@@ -206,10 +212,12 @@ nav{
   border-radius: 10px;
   cursor: pointer;
 }
-.popup .form .form-element button:hover{
+.popup .form .form-element button:hover,
+.popup2 .form .form-element button:hover{
   background: #9b8055dc;
 }
-.popup .form .form-element a{
+.popup .form .form-element a,
+.popup2 .form .form-element a{
   display: block;
   text-align: right;
   font-size: 15px;
@@ -217,6 +225,11 @@ nav{
   font-weight: 600;
   color: #9b8055;
 }
+/* .popup2 .form-element span a{
+  display: inline-flex;
+} */
+
+/* section 1 (image slider) */
 .content {
   position: relative;
   /* width: 100%; */
@@ -275,9 +288,6 @@ nav{
   background: rgba(5, 2, 2, 0.1);
   padding: 5px;
   /* border: 2px solid rgba(255, 255, 255, 0.25); */
-}
-.thumb li.active {
-  /* border: 2px solid rgba(255, 255, 255, 1); */
 }
 .thumb li::before {
   position: absolute;
