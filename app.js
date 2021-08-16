@@ -8,17 +8,17 @@ menuToggle.onclick = function () {
 }
 
 //show nav on scroll
-let showNav = document.querySelector('nav')
+// let showNav = document.querySelector('nav')
 
-window.onscroll = function() {
-  if (document.body.scrollTop || document.documentElement.scrollTop ) {
-    showNav.style.visibility = "visible";
-    showNav.style.opacity = 1;
-  } else {
-    showNav.style.visibility = "hidden";
-    showNav.style.opacity = 0;
-  }
-}
+// window.onscroll = function() {
+//   if (document.body.scrollTop || document.documentElement.scrollTop ) {
+//     showNav.style.visibility = "visible";
+//     showNav.style.opacity = 1;
+//   } else {
+//     showNav.style.visibility = "hidden";
+//     showNav.style.opacity = 0;
+//   }
+// }
 
 //login and signup form popup on vector-2 img
 document.querySelector("#show-login").addEventListener("click",function(){
