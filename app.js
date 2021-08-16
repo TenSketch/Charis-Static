@@ -8,17 +8,32 @@ menuToggle.onclick = function () {
 }
 
 //show nav on scroll
-let showNav = document.querySelector('nav')
+// let showNav = document.querySelector('nav')
 
-window.onscroll = function() {
-  if (document.body.scrollTop || document.documentElement.scrollTop ) {
-    showNav.style.visibility = "visible";
-    showNav.style.opacity = 1;
-  } else {
-    showNav.style.visibility = "hidden";
-    showNav.style.opacity = 0;
-  }
-}
+// window.onscroll = function() {
+//   if (document.body.scrollTop || document.documentElement.scrollTop ) {
+//     showNav.style.visibility = "visible";
+//     showNav.style.opacity = 1;
+//   } else {
+//     showNav.style.visibility = "hidden";
+//     showNav.style.opacity = 0;
+//   }
+// }
+
+//login form popup on vector-2 img
+document.querySelector("#show-login").addEventListener("click",function(){
+  document.querySelector(".popup").classList.add("active");
+  });
+  document.querySelector(".popup .close-btn").addEventListener("click",function(){
+  document.querySelector(".popup").classList.remove("active");
+  });
+//signup form popup on vector-2 img
+document.querySelector("#show-register").addEventListener("click",function(){
+  document.querySelector(".popup2").classList.add("active2");
+  });
+  document.querySelector(".popup2 .close-btn2").addEventListener("click",function(){
+  document.querySelector(".popup2").classList.remove("active2");
+  });
 
 //Image slider
 function imgSlider(anything) {
