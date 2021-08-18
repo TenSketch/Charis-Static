@@ -1,181 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <header>
-        <div class="container flex">
-            <!-- nav toggle -->
-            <div class="toggle">
-            </div>
-            <!-- logo -->
-            <a href="#" class="logo">
-                <img src="/images/Charish-logo.png" alt="Charis">
-            </a>
-            <nav class="flex">
-                <!-- nav menu-->
-                <ul class="navigation flex">
-                    <li><a href="#">Jute Bags</a></li>
-                    <li><a href="#">Gifts</a></li>
-                    <li><a href="#">Contact us</a></li>
-                </ul>
-                <!-- nav icons -->
-                <ul class="icons flex">
-                    <!-- user login and signup dropdown along with popup -->
-                    <div class="vector-2">
-                        <li>
-                            <a href="#">
-                                <img src="/images/Vector-2.png" alt="user"> 
-                                <span>Login</span>
-                            </a>
-                        </li>
-                        <div class="dropdown-menu">
-                            <a href="#" id="show-login">Login</a>
-                            <a href="#">Wishlist</a>
-                            <a href="#">Settings</a>
-                            <a href="#">Your Profile </a>
-                        </div>
+    <div class="card-wrapper">
+        <div class="card">
+            <!-- card left -->
+            
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <img src="./images/png/Be_Happy_carry_bag.png" alt="Be_Happy_carry_bag">
+                        <img src="./images/png/Gift _Giveaway_Bag.png" alt="Be_Happy_carry_bag">
+                        <img src="./images/png/Jute_Purse.png" alt="Be_Happy_carry_bag">
+                        <img src="./images/png/Shopping_Jute_bag.png" alt="Be_Happy_carry_bag">
+                        <img src="./images/png/Women___Style.png" alt="Be_Happy_carry_bag">
                     </div>
-                    <li class="vector-1">
-                        <a href="#">
-                            <img src="/images/Vector-1.png" alt="contact">
+                </div>
+                <div class="img-select">
+                    <div class="img-item">
+                        <a href="#" data-id="1">
+                            <img src="./images/png/Be_Happy_carry_bag.png" alt="">
                         </a>
-                    </li>
-                    <li class="vector-3">
-                        <a href="#">
-                            <img src="/images/Vector-3.png" alt="cart">
-                            <span>Cart</span>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="2">
+                            <img src="./images/png/Gift _Giveaway_Bag.png" alt="">
                         </a>
-                    </li>
-                </ul>
-            </nav>   
-        </div>
-        <!-- login/ signup form popup -->
-        <div class="popup">
-            <div class="close-btn">&times;</div>
-            <div class="form">
-                <h2>Log in</h2>
-                <div class="form-element">
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Enter your email">
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="3">
+                            <img src="./images/png/Jute_Purse.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="4">
+                            <img src="./images/png/Shopping_Jute_bag.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="5">
+                            <img src="./images/png/Women___Style.png" alt="">
+                        </a>
+                    </div>
                 </div>
-                <div class="form-element">
-                    <label for="password">Password</label>
-                    <input type="password"  placeholder="Enter your password">
-                </div>
-                <div class="form-element">
-                    <input type="checkbox" id="remember-me">
-                    <label for="remember-me">Remember-me</label>
-                </div>
-                <div class="form-element">
-                    <button>Sign in</button>
-                </div>
-                <div class="form-element">
-                    <a href="#">Forgot Password</a>
-                </div>
-                <div class="form-element">
-                    <span> 
-                        new user?
-                        <a href="#" id="show-register">Register</a>
-                    </span>
-                    
-                </div>
+                
             </div>
-        </div> 
-        <div class="popup2">
-            <div class="close-btn2">&times;</div>
-            <div class="form">
-                <h2>sign up</h2>
-                <div class="form-element">
-                    <label for="phone number">Phone Number</label>
-                    <input type="text" placeholder="Enter your phone number">
-                </div>
-                <div class="form-element">
-                    <label for="email">Email</label>
-                    <input type="text" placeholder="Enter your email">
-                </div>
-                <div class="form-element">
-                    <label for="password"></label>
-                    <input type="password"  placeholder="Enter your password">
-                </div>
-                <div class="form-element">
-                    <input type="checkbox" id="remember-me">
-                    <label for="remember-me">Remember-me</label>
-                </div>
-                <div class="form-element">
-                    <button>Sign up</button>
-                </div>
-                <!-- <div class="form-element">
-                    <a href="#">Forgot Password</a>
+            
+            <!-- card right -->
+            <div class="product-content">
+                <h2 class="product-title">Charis Bags</h2>
+                <a href="#" class="product-link">visit charis store</a>
+                <!-- <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.7(20)</span>
+
                 </div> -->
-                <div class="form-element">
-                    <span>Existing user?</span>
-                    <a href="#">Login</a>
+                <div class="product-price">
+                    <p class="last-price">Old price: <span>Rs 999</span></p>
+                    <p class="new-price">New price: <span>Rs 799(20% off)</span></p>
+                </div>
+                <div class="purchase-info">
+                    <input type="number" min="0" value="1">
+                    <button type="button" class="btn">
+                        Add to cart <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <button type="button" class="btn">Buy Now</button>
+                </div>
+
+                <div class="product-detail">
+                    <h2>about this item:</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus mollitia cumque corrupti ea, iure, hic ipsum laboriosam minima saepe fugit est, laudantium quia? Atque et illum cumque repudiandae esse exercitationem?</p>
+                    <ul>
+                        <li>Color :<span> Brown</span></li>
+                        <li>Available :<span> In-stock</span></li>
+                        <li>Category :<span> Bags</span></li>
+                        <li>Shipping-Area :<span> All over the country</span></li>
+                        <li>Shipping-Fee :<span> Free</span></li>
+                    </ul>
+                </div>
+                <!-- <div class="purchase-info">
+                    <input type="number" min="0" value="1">
+                    <button type="button" class="btn">
+                        Add to cart <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <button type="button" class="btn">Buy Now</button>
+                </div> -->
+                <div class="social-links">
+                    <p>Share At:</p>
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </header>
-    <section class="flex">
-        <div class="bg">
-        </div>
-        <div class="content flex">
-            <div class="textbox">
-                <h2>Charis Jute Bags</h2>
-                <p>Why should you buy a Jute bag? </p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="imgbox">
-                <img src="/images/png/Be_Happy_carry_bag.png" alt="">
-            </div>
-        </div>
-        <ul class="thumb">
-
-            <li data-text="Gift Giveaway Bag" class="active">
-                <img src="./images/png/Gift _Giveaway_Bag.png"
-                    onclick="imgSlider('./images/png/Gift _Giveaway_Bag.png');changeBgColor('#cdb446')">
-            </li>
-            <li data-text="Jute School bag">
-                <img src="./images/png/Jute_School_bag.png"
-                    onclick="imgSlider('./images/png/Jute_School_bag.png');changeBgColor('#a54935')">
-            </li>
-            <li data-text="Shopping Jute bag">
-                <img src="./images/png/Be_Happy_carry_bag.png"
-                    onclick="imgSlider('./images/png/Be_Happy_carry_bag.png');changeBgColor('#ba9b78')">
-            </li>
-            <li data-text="Women Style bag">
-                <img src="./images/png/Women___Style.png"
-                    onclick="imgSlider('./images/png/Women___Style.png');changeBgColor('#de5455')">
-            </li>
-        </ul>
-    </section>
-    <!--  sample section for scrolling  -->
-    <section>
-        <div class="sample">
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-        </div>
-        <div class="sample">
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-        </div>
-        <div class="sample">
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </p>
-        </div>
-    </section>
-
-
-   <script src="app.js"></script>
+    </div>
+    <script src="app.js"></script>
 </body>
-
 </html>
