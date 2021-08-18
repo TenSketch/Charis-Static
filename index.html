@@ -8,126 +8,172 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="products">
-    <div class="container flex" >
 
-        <div class="row" style="transition: all 0.5s ease 0s; transform: rotateY(0deg) rotateX(0deg);">
-            <div class="card"id="card-1" style="transition: all 0.5s ease 0s; transform: rotateY(0deg) rotateX(0deg);">
-                <div class="bags">
-                    <img src="images/manav/carrybag.png" alt="adidas">
-                </div>
-                <div class="info">
-                    <h1 class="title" style="transform: translateZ(0px);">Jute Bag</h1>
-                    <h3> A portable jute carry bag for shopping</h3>
-                    <div class="MRP">
-                        <h2>Rs. 499/-</h2>
-                        <h3><del>Rs. 999/-</del></h3>
+    <!-- mahima navbar, image slider, muskan-login -->
+    <header>
+        <div class="container flex">
+            <!-- nav toggle -->
+            <div class="toggle">
+            </div>
+            <!-- logo -->
+            <a href="#" class="logo">
+                <img src="/images/Charish-logo.png" alt="Charis">
+            </a>
+            <nav class="flex">
+                <!-- nav menu-->
+                <ul class="navigation flex">
+                    <li><a href="#">Jute Bags</a></li>
+                    <li><a href="#">Gifts</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+                <!-- nav icons -->
+                <ul class="icons flex">
+                    <!-- user login and signup dropdown along with popup -->
+                    <div class="vector-2">
+                        <li>
+                            <a href="#">
+                                <img src="/images/Vector-2.png" alt="user"> 
+                                <span>Login</span>
+                            </a>
+                        </li>
+                        <div class="dropdown-menu">
+                            <a href="#" id="show-login">Login</a>
+                            <a href="#">Wishlist</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Your Profile </a>
+                        </div>
                     </div>
+                    <li class="vector-1">
+                        <a href="#">
+                            <img src="/images/Vector-1.png" alt="contact">
+                        </a>
+                    </li>
+                    <li class="vector-3">
+                        <a href="#">
+                            <img src="/images/Vector-3.png" alt="cart">
+                            <span>Cart</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>   
+        </div>
+        <!-- login/ signup form popup -->
+        <div class="popup">
+            <div class="close-btn">&times;</div>
+            <div class="form">
+                <h2>Log in</h2>
+                <div class="form-element">
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Enter your email">
                 </div>
-                <div class="icon">
-                    <img src="images/manav/cart.png" alt="cart">
-                    <img src="images/manav/fav_icon.png" alt="cart">
+                <div class="form-element">
+                    <label for="password">Password</label>
+                    <input type="password"  placeholder="Enter your password">
+                </div>
+                <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember-me</label>
+                </div>
+                <div class="form-element">
+                    <button>Sign in</button>
+                </div>
+                <div class="form-element">
+                    <a href="#">Forgot Password</a>
+                </div>
+                <div class="form-element">
+                    <span> 
+                        new user?
+                        <a href="#" id="show-register">Register</a>
+                    </span>
+                    
+                </div>
+            </div>
+        </div> 
+        <div class="popup2">
+            <div class="close-btn2">&times;</div>
+            <div class="form">
+                <h2>sign up</h2>
+                <div class="form-element">
+                    <label for="phone number">Phone Number</label>
+                    <input type="text" placeholder="Enter your phone number">
+                </div>
+                <div class="form-element">
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Enter your email">
+                </div>
+                <div class="form-element">
+                    <label for="password"></label>
+                    <input type="password"  placeholder="Enter your password">
+                </div>
+                <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember-me</label>
+                </div>
+                <div class="form-element">
+                    <button>Sign up</button>
+                </div>
+                <!-- <div class="form-element">
+                    <a href="#">Forgot Password</a>
+                </div> -->
+                <div class="form-element">
+                    <span>Existing user?</span>
+                    <a href="#">Login</a>
                 </div>
             </div>
         </div>
-        <div class="row" style="transition: all 0.5s ease 0s; transform: rotateY(0deg) rotateX(0deg);">
-            <div class="card"id="card-2" style="transition: all 0.5s ease 0s; transform: rotateY(0deg) rotateX(0deg);">
-                <div class="bags">
-                    <img src="images/manav/backpack.png" alt="adidas">
-                </div>
-                <div class="info">
-                    <h1 class="title" style="transform: translateZ(0px);">Jute Bag</h1>
-                    <h3> A portable backpack for students</h3>
-                    <div class="MRP">
-                        <h2>Rs. 899/-</h2>
-                        <h3><del>Rs. 1099/-</del></h3>
-                    </div>
-                </div>
-                <div class="icon">
-                    <img src="images/manav/cart.png" alt="cart">
-                    <img src="images/manav/fav_icon.png" alt="cart">
-                </div>
+    </header>
+    <section class="flex">
+        <div class="bg">
+        </div>
+        <div class="content flex">
+            <div class="textbox">
+                <h2>Charis Jute Bags</h2>
+                <p>Why should you buy a Jute bag? </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgbox">
+                <img src="/images/png/Be_Happy_carry_bag.png" alt="">
             </div>
         </div>
+        <ul class="thumb">
 
-        <div class="row" style="transition: all 0.5s ease 0s; transform: rotateY(0deg) rotateX(0deg);">
-            <div class="card"id="card-3" style="transition: all 0.5s ease 0s; transform: rotateY(0deg) rotateX(0deg);">
-                <div class="bags">
-                    <img src="images/manav/travel_bag.png" alt="adidas">
-                </div>
-                <div class="info">
-                    <h1 class="title" style="transform: translateZ(0px);">Jute Bag</h1>
-                    <h3> A portable jute  bag for travelling</h3>
-                    <div class="MRP">
-                        <h2>Rs. 699/-</h2>
-                        <h3><del>Rs. 999/-</del></h3>
-                    </div>
-                </div>
-                <div class="icon">
-                    <img src="images/manav/cart.png" alt="cart">
-                    <img src="images/manav/fav_icon.png" alt="cart">
-                </div>
-            </div>
-        </div>
-        <div class="row" style="transition: all 0.5s ease 0s; transform: rotateY(0deg) rotateX(0deg);">
-            <div class="card"id="card-4" style="transition: all 0.5s ease 0s; transform: rotateY(0deg) rotateX(0deg);">
-                <div class="bags">
-                    <img src="images/manav/woman_purse.png" alt="adidas">
-                </div>
-                <div class="info">
-                    <h1 class="title" style="transform: translateZ(0px);">Jute Bag</h1>
-                    <h3> A classy jute purse for woman</h3>
-                    <div class="MRP">
-                        <h2>Rs. 599/-</h2>
-                        <h3><del>Rs. 999/-</del></h3>
-                    </div>
-                </div>
-                <div class="icon">
-                    <img src="images/manav/cart.png" alt="cart">
-                    <img src="images/manav/fav_icon.png" alt="cart">
-                </div>
-            </div>
-        </div>
-
-    </div>
-
+            <li data-text="Gift Giveaway Bag" class="active">
+                <img src="./images/png/Gift _Giveaway_Bag.png"
+                    onclick="imgSlider('./images/png/Gift _Giveaway_Bag.png');changeBgColor('#cdb446')">
+            </li>
+            <li data-text="Jute School bag">
+                <img src="./images/png/Jute_School_bag.png"
+                    onclick="imgSlider('./images/png/Jute_School_bag.png');changeBgColor('#a54935')">
+            </li>
+            <li data-text="Shopping Jute bag">
+                <img src="./images/png/Be_Happy_carry_bag.png"
+                    onclick="imgSlider('./images/png/Be_Happy_carry_bag.png');changeBgColor('#ba9b78')">
+            </li>
+            <li data-text="Women Style bag">
+                <img src="./images/png/Women___Style.png"
+                    onclick="imgSlider('./images/png/Women___Style.png');changeBgColor('#de5455')">
+            </li>
+        </ul>
     </section>
-    <footer class="footer">
-        <div class="l-footer">
-        <h1>
-        <img src="./images/logo.png" alt=""></h1>
-        <p>
-        Think Green</p>
+    <!--  sample section for scrolling  -->
+    <section>
+        <div class="sample">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
         </div>
-        <ul class="r-footer">
-        <li>
-          <h2>
-        Social</h2>
-        <ul class="box">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Pinterest</a></li>
-        <li><a href="#">Instagram</a></li>
-        </ul>
-        </li>
-       
-        <li>
-          <h2>
-        Get in touch</h2>
-        <address>
-            KALOSE Inc,
-            Century Park East Suite 803,
-            Los Angeles,
-            +44 (0) 207 543 5478
-        </address>
-        
-        </li>
-        </ul>
-        <div class="b-footer">
-        <p>
-        All rights reserved by ©CompanyName 2020 </p>
+        <div class="sample">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
         </div>
-        </footer>
+        <div class="sample">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+        </div>
+    </section>
+
 
     <script src="./app.js"></script>
 </body>
