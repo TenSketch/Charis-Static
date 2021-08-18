@@ -1,1 +1,8 @@
 # Charis-Static
+
+
+#2E323F
+#3B4050 
+#6F737F
+#FFFFFF
+#A59678
