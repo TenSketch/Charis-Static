@@ -23,8 +23,10 @@ menuToggle.onclick = function () {
 
 //login form popup on vector-2 img
 document.querySelector("#show-login").addEventListener("click",function(){
+  document.querySelector(".dropdown-menu").style.display = "none";
   document.querySelector(".popup").classList.add("active");
   });
+
   document.querySelector(".popup .close-btn").addEventListener("click",function(){
   document.querySelector(".popup").classList.remove("active");
   });
@@ -35,6 +37,11 @@ document.querySelector("#show-register").addEventListener("click",function(){
   document.querySelector(".popup2 .close-btn2").addEventListener("click",function(){
   document.querySelector(".popup2").classList.remove("active2");
   });
+  document.getElementById("login-reappear").addEventListener("click", function(){
+    // document.querySelector('.popup2.active2')
+    document.querySelector('.popup2.active2').style.display = "none";
+    // mybox.style.display = "none";
+  })
 
 //Image slider
 function imgSlider(anything) {

@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3d Card Effect</title>
+    <title>Charis</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- mahima navbar, image slider, muskan-login -->
+    <!-- Mahima navbar, image slider, Muskan-login -->
     <header>
         <div class="container flex">
             <!-- nav toggle -->
-            <div class="toggle active">
+            <div class="toggle">
             </div>
             <!-- logo -->
             <a href="#" class="logo">
@@ -23,7 +23,7 @@
             </a>
             <nav class="flex">
                 <!-- nav menu-->
-                <ul class="navigation flex active">
+                <ul class="navigation flex">
                     <li><a href="#">Jute Bags</a></li>
                     <li><a href="#">Gifts</a></li>
                     <li><a href="#">Contact us</a></li>
@@ -83,11 +83,12 @@
                     <a href="#">Forgot Password</a>
                 </div>
                 <div class="form-element">
-                    <span> 
-                        new user?
-                        <a href="#" id="show-register">Register</a>
-                    </span>
-                    
+                    <a href="#" id="show-register">
+                        <span> 
+                            new user? 
+                        </span> 
+                        Register
+                    </a>
                 </div>
             </div>
         </div> 
@@ -104,7 +105,7 @@
                     <input type="text" placeholder="Enter your email">
                 </div>
                 <div class="form-element">
-                    <label for="password"></label>
+                    <label for="password">Password</label>
                     <input type="password" placeholder="Enter your password">
                 </div>
                 <div class="form-element">
@@ -118,8 +119,12 @@
                     <a href="#">Forgot Password</a>
                 </div> -->
                 <div class="form-element">
-                    <span>Existing user?</span>
-                    <a href="#">Login</a>
+                    <a id="login-reappear" href="#">
+                        <span>
+                            Existing user? 
+                        </span>
+                        Login
+                    </a>
                 </div>
             </div>
         </div>
@@ -158,8 +163,8 @@
         </ul>
     </section>
 
-    <!-- featured products -->
-    <section class="products">
+    <!-- featured products- Manav -->
+    <section class="featured-products">
         <div class="container flex">
             <div class="card">
                 <div class="bags">
@@ -229,12 +234,70 @@
                     <img src="images/manav/fav_icon.png" alt="cart">
                 </div>
             </div>
-         
-
-
         </div>
-
     </section>
+
+    <!-- About Us- Muskan -->
+    <section class="section-6">
+        <div class="grid-container">
+            <div class="side-img">
+                <img src="/images/aboutus2.png" alt="" class="sidebar">
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h1 class="content-title">About Charis Jute bags</h>
+                        <p>At Charis, we have been selling High quality Jute bags for personal and commercial purposes since 2020. Some of our jute bags are multipurpose shopping bags, hands bags, minimal art embedded bags, office bags, travel bags, purses, etc.</p> 
+                        <br>  
+                        <p>time to say NO to fake eco-friendly plastic bags!</p>
+                </div>
+                <div class="lower-img">
+                    <img src="/images/aboutus.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer started- Aman  -->
+    <footer class="footer">
+        <div class="l-footer">
+            <h1>
+                <img src="./images/logo.png" alt="">
+            </h1>
+            <p>
+                Think Green
+            </p>
+        </div>
+        <ul class="r-footer">
+            <li>
+                <h2>
+                    Social
+                </h2>
+                <ul class="box">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2>
+                    Get in touch
+                </h2>
+                <address>
+                    KALOSE Inc,
+                    Century Park East Suite 803,
+                    Los Angeles,
+                    +44 (0) 207 543 5478
+                </address>
+            </li>
+        </ul>
+        <div class="b-footer">
+            <p>
+                All rights reserved by ©CompanyName 2020 
+            </p>
+        </div>
+    </footer>
 
     <script src="./app.js"></script>
 </body>
+</html>
