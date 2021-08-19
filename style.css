@@ -421,7 +421,7 @@ ul.navigation.flex {
   width: min(1200px, 80%);
   margin: 0 auto;
 }
-.featured-products .products .flex {
+.featured-products .flex {
   display: flex;
   justify-content: center;
   gap: 1em;
