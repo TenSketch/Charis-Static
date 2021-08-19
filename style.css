@@ -414,20 +414,20 @@ ul.navigation.flex {
 
 /* Manav cards */
 
-.products {
+.featured-products {
   padding-block: 5rem;
 }
-.container {
+.featured-products .container {
   width: min(1200px, 80%);
   margin: 0 auto;
 }
-.products .flex {
+.featured-products .products .flex {
   display: flex;
   justify-content: center;
   gap: 1em;
   flex-wrap: wrap;
 }
-.card {
+.featured-products .card {
   width: 15rem;
   cursor: pointer;
   padding: 1rem;
@@ -435,26 +435,26 @@ ul.navigation.flex {
   border: 1px solid #dedede;
   border-radius: 5%;
 }
-.card:hover {
+.featured-products .card:hover {
   box-shadow: 0 10px 10px rgb(0 0 0 / 20%), 0px 0px 20px rgb(0 0 0 / 20%);
 }
-.bags {
+.featured-products .bags {
   max-width: 20rem;
   display: flex;
   justify-content: center;
 }
-.bags img {
+.featured-products .bags img {
   max-width: 70%;
   z-index: 2;
   transition: all 0.75s ease-out;
 }
-.info h1 {
+.featured-products .info h1 {
   font-size: min(1.4rem, 7vw);
   transition: all 0.95s ease-out;
   text-align: center;
   color: #9b8055;
 }
-.info h3 {
+.featured-products .info h3 {
   font-size: 1rem;
   margin-block: 0.5em;
   color: #1b160e;
@@ -463,30 +463,87 @@ ul.navigation.flex {
   text-align: center;
   font-size: 1.4ch;
 }
-.MRP {
+.featured-products .MRP {
   transition: all 0.75s ease-out;
   height: 100%;
   align-items: center;
 }
-.MRP h2 {
+.featured-products .MRP h2 {
   color: #1b160e;
   text-align: center;
   font-size: 1.7ch;
 }
-.MRP h3 {
+.featured-products .MRP h3 {
   text-align: center;
 }
-.icon {
+.featured-products .icon {
   transition: all 0.75s ease-out;
   display: flex;
   justify-content: space-between;
 }
-.icon img {
+.featured-products .icon img {
   width: 30px;
 }
 @media(min-width:800px){
-  .products .flex {
+  .featured-products .flex {
     flex-wrap: nowrap;
+  }
+}
+
+/* Muskan about us */
+.section-6 img{
+  max-width: 100%;
+}
+.section-6 .grid-container{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 1.5fr;
+  grid-template-areas: 
+  "side-img"
+  "content"
+  "lower-img";
+  margin: 2em;
+  grid-row-gap: 2em;
+  
+} 
+.section-6 .side-img{
+  grid-area: side-img;
+  padding-inline: 15%;
+  margin: 0;
+}
+.section-6 .content{
+  grid-area: content;
+}
+.section-6 .content p{
+  font-weight: 100;
+  font-size: .8em;
+}
+.section-6 .lower-img{
+  grid-area: lower-img;
+}
+@media screen and (min-width:750px){
+  .section-6 .grid-container{
+      grid-template-columns: 1.5fr 3fr;
+      grid-template-rows: 2fr 2.5fr ;
+      grid-template-areas: 
+      "side-img content"
+      "side-img lower-img";
+      /* grid-column-gap: 0; */
+  }
+  .section-6 .side-img{
+      grid-area: side-img;
+  }
+  .section-6 .content{
+      grid-area: content;
+  }
+  .section-6 .lower-img{
+      grid-area: lower-img;
+      padding-top: 2em;
+  }
+  .section-6 .card{
+      margin-left: 0em;
+      margin-right: 3em;
   }
 }
 
