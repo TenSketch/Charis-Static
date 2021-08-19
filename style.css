@@ -44,7 +44,7 @@ img{
   padding: 2rem 1rem;
 }
 .product-title{
-  font-size: 4ch;
+  font-size: 3ch;
   text-transform: capitalize;
   font-weight: 700;
   position: absolute;
@@ -55,7 +55,9 @@ img{
   text-transform: uppercase;
   font-weight: 400;
   font-size: 0.9rem;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0.5rem;
   background-color: #256eff;
   color: #fff;
@@ -112,26 +114,49 @@ img{
 .product-detail ul li span{
   font-weight: 400;
 }
-.purchase-info{
+.quantity{
   display: flex;
   justify-content: center;
-  gap: 2.5%;
+  margin-bottom: 10%;
 }
-.purchase-info input,
+.quantity button{
+  width: 15%;
+  height: 45px;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 0;
+  background: #fff;
+}
+.quantity input{
+  border: none;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  width: 30%;
+  font-size: 20px;
+  color: #000;
+  font-weight: 300;
+
+}
+.purchase-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
 .purchase-info .btn{
-  border: 1.5px solid #ddd;
+  /* border: 1.5px solid #ddd; */
+  display: flex;
+  justify-content: center;
   text-align: center;
   padding: 0.5rem 0.8rem;
-}
-.purchase-info input{
-  width: 15%;
-}
-.purchase-info .btn{
   cursor: pointer;
-  color: white;
-  width: 35%;
+  color: #fff;
+  width: 60%;
   border: none;
 }
+
 .purchase-info .btn:first-of-type{
   background: #f7e709;
 }
@@ -166,16 +191,20 @@ img{
 }
 @media screen and (min-width:650px) {
   .img-display{
-      /* width: 70%; */
-      margin-top: 10%;
+      width: 100%;
+      margin-top:05%;
+      margin-right: 50%;
   }
   .card{
       display: grid;
-      grid-template-columns: 10% repeat(2, 1fr) 10%; 
+      grid-template-columns: 10%  repeat(2, 1fr) 10%; 
   }
   .product-imgs{
       grid-column: 2/3;
   }
+  /* .product-content{
+    grid-column: 3/4;
+  } */
   .img-showcase{
       width: unset;
   }
@@ -187,8 +216,24 @@ img{
       margin: 0 auto;
   }
   .product-title{
-      font-size: 6ch;
+      font-size: 5ch;
       position: relative;
       top: 0
   }
+  .purchase-info {
+    flex-direction: row;
+    gap: 5%;
+    }
+    .quantity{
+      justify-content:flex-start;
+      margin-bottom: 5%;
+    }
+    .product-link{
+      display: inline-block;
+    }
+    .purchase-info btn{
+      width: 70%;
+    }
+
+  
 }
